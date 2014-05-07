@@ -1,16 +1,4 @@
-/*
-Configuration for RequireJS. Usage of RequireJS is not mandatory for your
-project.
-*/
-require.config({
-	baseUrl: "js/lib",
-	paths: {
-	       jquery: "jquery-1.11.1.min",
-	       mustache: "mustache"
-	}
-});
-
-define(["jquery", "mustache"], function($, Mustache) {
+(function($, Mustache) {
 	"use strict";
 
 	/*
@@ -227,4 +215,4 @@ define(["jquery", "mustache"], function($, Mustache) {
 		});
 	}
 
-});
+})($, Mustache);
