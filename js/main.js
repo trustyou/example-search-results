@@ -159,18 +159,31 @@
 		});
 
 		// from each category, add one highlight
-		var highlights = [];
+		var highlights = [], highlight;
 		relevantCategories.forEach(function(category) {
 			if (category["highlight_list"].length > 0) {
-				var highlight = category["highlight_list"][0]["text"];
 				/*
-				Note that highlights can repeat in different
-				categories, so we have to check if the text is
-				present already before adding.
+				If there are highlights for this category, pick
+				the first one.
 				*/
-				if (highlights.indexOf(highlight) === -1) {
-					highlights.push(highlight);
-				}
+				highlight = category["highlight_list"][0]["text"];
+			} else {
+				/*
+				It is possible that no highlights are returned
+				for some categories and rare languages, e.g.
+				Thai. For such cases, we recommend to use the
+				"short_text" property, which is guaranteed to
+				be present for all categories and languages.
+				*/
+				highlight = category["short_text"];
+			}
+			/*
+			Note that highlights can repeat in different
+			categories, so we have to check if the text is present
+			already before adding.
+			*/
+			if (highlights.indexOf(highlight) === -1) {
+				highlights.push(highlight);
 			}
 		});
 		// take the top three highlights
