@@ -31,12 +31,17 @@
 
 	/*
 	Prepare the request to the TrustYou API. We will make use of the Bulk
-	API to launch several requests at once. Note how the language needs to
-	be passed with each individual request, but the mandatory API key need
-	only be put once in the bulk request.
+	API to launch several requests at once. Note how the language and
+	version need to be passed with each individual request, but the
+	mandatory API key need only be put once in the bulk request.
 	*/
 	var requestList = hotels.map(function(hotel) {
-		return "/hotels/" + hotel.tyId + "/tops_flops.json?lang=en";
+		/*
+		When querying a JSON widget, always ask for the specific
+		version you developed against. This guarantees that no schema-
+		breaking changes will affect your code.
+		*/
+		return "/hotels/" + hotel.tyId + "/tops_flops.json?" + $.param({lang: "en", v: "5.16"});
 	});
 	// JSON-encode the request list
 	requestList = JSON.stringify(requestList);
