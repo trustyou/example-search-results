@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://cdn.trustyou.com/common/trustyou-iconic/css/trustyou-iconic.css"/>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/trustscore.css"/>
-    <link rel="stylesheet" href="css/search-result-list-demo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 
     <!-- This demo uses the popular MustacheJS templating engine to dynamically build an HTML page in the browser. Depending on your use case, you will likely use a server-side templating language. -->
 
@@ -111,25 +111,23 @@
   <body class="trustyou-ui">
     <div class="container">
 
-      <h1>TrustYou API &ndash; Search Result List Demo</h1>
+		<h1>What hotels are you searching for?</h1>
 
       <section class="search-results recommended">
-	<h2>
-	  Recommended Hotels
-	</h2>
+		<h2>Recommended hotels:</h2>
 	<!-- Placeholder where content will be inserted by JavaScript: -->
 	<div id="recommendedHotels"></div>
       </section>
 
       <section class="search-results">
-	<h2>
-	  Search Results
-	</h2>
+		<h2>We found 3 results matching your search:</h2>
 	<!-- Placeholder where content will be inserted by JavaScript: -->
 	<div id="hotels"></div>
       </section>
 
-      <img src="http://api.trustyou.com/static/img/powered-by-trustyou-small.png" alt="powered by TrustYou" class="powered-by-trustyou"/>
+		<a href="http://trustyou.com" class="verified-reviews">
+			<img src="http://api.trustyou.com/static/img/powered-by-trustyou-small.png" alt="Verified Reviews TrustYou" />
+		</a>
     </div>
 
     <!-- See js/main.js for what happens next :) -->

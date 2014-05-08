@@ -1,0 +1,211 @@
+/* General styles */
+
+body {
+	font: 13px/18px "Roboto", Arial, Helvetica sans-serif;
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+h1 {
+	margin: 60px 0;
+	color: #666;
+	text-align: center;
+	font-weight: 300;
+	font-size: 2.0em;
+}
+
+.container {
+	width: 960px;
+}
+
+/* Verified reviews */
+
+a.verified-reviews {
+	display: block;
+	float: right;
+	margin: 20px 0 40px;
+}
+
+a.verified-reviews:before,
+a.verified-reviews:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+/* Search results */
+
+.search-results h2 {
+	margin: 0 0 30px;
+	color: #08c;
+	text-align: left;
+	font-weight: 300;
+	font-size: 1.8em;
+}
+
+.search-results .hotel {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	height: 130px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+
+.search-results .hotel h3 {
+	margin: 0 0 10px;
+	color: #555;
+	font-weight: normal;
+	font-size: 1.3em;
+}
+
+/* Rating */
+
+.search-results .rating {
+	display: block;
+	margin-bottom: 15px;
+	height: 15px;
+}
+
+/* Stars */
+
+.search-results .hotel .stars{
+	float: left;
+	margin-top: -2px;
+	width: 85px;
+	color: #ccc;
+	font-size: 1.1em;
+}
+
+.search-results .hotel .stars span{
+	margin-right: -3px;
+}
+
+.search-results .hotel .stars span.active{
+	color: #ffb400;
+}
+
+/* TrustScore */
+
+.search-results .hotel .trustscore {
+	float: left;
+	width: 200px;
+}
+
+/* Ranking */
+
+.search-results .hotel .ranking {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	padding: 0 15px;
+	background: #119a11;
+	color: #fff;
+	font-size: .8em;
+}	
+
+.search-results .hotel .rank-wrapper {
+	display:table-cell;
+	height: 38px; 
+	vertical-align:middle;
+}
+
+.search-results .hotel .ranking span {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, .6);
+	font-size: 1.0em;
+	line-height: 1.2em;
+}
+
+/* Thumbnail */
+
+.search-results .hotel .thumbnail {
+	position: relative;
+	float: left;
+	margin: 0 20px 0 0;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+}
+
+.search-results .hotel .thumbnail img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Deals */
+
+.search-results .hotel .deals {
+	float: right;
+	color: #428bca;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+.search-results .hotel .deals .price {
+	display: block;
+	margin: 10px 0;
+	font-size: 2.2em;
+}
+
+/* Snippets & hotel type */
+
+.search-results .hotel .hotel-type .ty-icon {
+	float: left;
+	margin-right: 8px;
+	font-size: 1.2em;
+}
+
+.search-results .hotel .hotel-type,
+.search-results .hotel .highlights {
+	float: left;
+	width: 650px;
+	color: #666;
+	font-weight: 300;
+	font-size: 1.1em;
+}
+
+.search-results .hotel .highlights {
+	font-style: italic;
+}
+
+.search-results .hotel .highlights span {
+	display: block;
+	float: left;
+	margin: 5px 5px 0 0;
+}
+
+.search-results .hotel .hotel-type span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Recommended hotels */
+
+.search-results.recommended .hotel {
+	margin-bottom: 30px;
+	padding: 20px;
+	height: 140px;
+	border-bottom: none;
+	background: #fafafa;
+}
+
+.search-results.recommended .hotel .thumbnail {
+	margin: -20px 20px 0 -20px;
+	width: 140px;
+	height: 140px;
+}
+
+.search-results.recommended .hotel .deals {
+	float: right;
+	color: #5cb85c;
+}
+
+.search-results.recommended .hotel .thumbnail {
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
