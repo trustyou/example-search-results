@@ -9,23 +9,28 @@
 	var hotels = [
 		{
 			name: "Hotel Adlon Kempinski",
-			tyId: "60fd56b6-8f61-4672-a1d3-d76ec6bcf540"
+			tyId: "60fd56b6-8f61-4672-a1d3-d76ec6bcf540",
+			image: "img/Hotel_Adlon_Kempinski.jpg"
 		},
 		{
 			name: "The Mandala Hotel",
-			tyId: "a6d7ac66-51ca-46b4-9a74-57324a2977b4"
+			tyId: "a6d7ac66-51ca-46b4-9a74-57324a2977b4",
+			image: "img/The_Mandala_Hotel.jpg"
 		},
 		{
 			name: "Das Stue",
-			tyId: "359e1e4b-569a-4f97-aaa1-357f241a851b"
+			tyId: "359e1e4b-569a-4f97-aaa1-357f241a851b",
+			image: "img/Das_Stue_Hotel.jpg"
 		},
 		{
 			name: "Adina Apartment Hotel Berlin Hackescher Markt",
-			tyId: "387d25e2-4321-4b45-a02a-e548a460383a"
+			tyId: "387d25e2-4321-4b45-a02a-e548a460383a",
+			image: "img/Adina_Apartment_Hotel.jpg"
 		},
 		{
 			name: "Regent Berlin",
-			tyId: "07a403a9-cb62-4a20-a134-139b2eab7fdb"
+			tyId: "07a403a9-cb62-4a20-a134-139b2eab7fdb",
+			image: "img/Regent_Berlin.jpg"
 		}
 	];
 
@@ -82,7 +87,8 @@
 			reviewsCount: reviewSummary["reviews_count"],
 			trustScore: reviewSummary["summary"].score,
 			popularity: reviewSummary["summary"].popularity,
-			hotelTypes: []
+			hotelTypes: [],
+			image: hotelData.image
 		};
 
 		/*
@@ -124,7 +130,8 @@
 			name: hotelData.name,
 			reviewsCount: reviewSummary["reviews_count"],
 			trustScore: reviewSummary["summary"].score,
-			highlights: []
+			highlights: [],
+			image: hotelData.image
 		};
 
 		/*
@@ -153,7 +160,7 @@
 		});
 		// ... and all good to know categories
 		categories = categories.concat(reviewSummary["good_to_know_list"]);
-		// ... and finally sort be relevance
+		// ... and finally sort by relevance
 		var relevantCategories = categories.sort(function(catA, catB) {
 			return catB["relevance"] - catA["relevance"];
 		});
