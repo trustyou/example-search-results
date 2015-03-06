@@ -46,7 +46,7 @@
 		version you developed against. This guarantees that no schema-
 		breaking changes will affect your code.
 		*/
-		return "/hotels/" + hotel.tyId + "/tops_flops.json?" + $.param({lang: "en", v: "5.16"});
+		return "/hotels/" + hotel.tyId + "/tops_flops.json?" + $.param({lang: "en", v: "5.23"});
 	});
 	// JSON-encode the request list
 	requestList = JSON.stringify(requestList);
@@ -59,8 +59,7 @@
 			This is a demo API key, do not reuse it! Contact
 			TrustYou to receive your own.
 			*/
-			key: "a06294d3-4d58-45c8-97a1-5c905922e03a",
-			v: "5.18"
+			key: "a06294d3-4d58-45c8-97a1-5c905922e03a"
 		},
 		// Usage of JSONP is not required for server-side calls
 		dataType: "jsonp"
