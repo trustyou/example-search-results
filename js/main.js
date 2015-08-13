@@ -46,7 +46,7 @@
 		version you developed against. This guarantees that no schema-
 		breaking changes will affect your code.
 		*/
-		return "/hotels/" + hotel.tyId + "/tops_flops.json?" + $.param({lang: "en", v: "5.23"});
+		return "/hotels/" + hotel.tyId + "/meta_review.json?" + $.param({lang: "en", v: "5.25", show_filters: false});
 	});
 	// JSON-encode the request list
 	requestList = JSON.stringify(requestList);
