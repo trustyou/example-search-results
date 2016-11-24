@@ -53,12 +53,12 @@
 	    </div>
 	  </div>
 	  <p class="hotel-type">
-	    {{#hotelTypes}}
+	    {{#badges}}
 	    <span>
 	      <i class="ty-icon ty-icon-{{categoryId}}"></i>
-	      {{&text}}
+	      {{&text}} &ndash; <em>{{&subtext}}</em>
 	    </span>
-	    {{/hotelTypes}}
+	    {{/badges}}
 	  </p>
 	</div>
       </div>

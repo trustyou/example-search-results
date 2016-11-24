@@ -92,22 +92,14 @@
 		};
 
 		/*
-		For recommended hotels, we will merely show the first (i.e.
-		primary) hotel type.
+		For recommended hotels, we will merely show the first badge.
 		*/
-		if (reviewSummary["hotel_type_list"].length > 0) {
-			var hotelType = reviewSummary["hotel_type_list"][0];
-			templateData.hotelTypes = [{
-				categoryId: hotelType["category_id"],
-				/*
-				Texts in the "text" property contain markers
-				in the form of <pos>..</pos>, <neg>..</neg> and
-				<neu>..</neu>, which enclose passages in the
-				text that contain sentiment. Either remove
-				these before displaying the text, or replace
-				them with meaningful markup, as is done here.
-				*/
-				text: hotelType["text"].replace("<pos>", "<strong>").replace("</pos>", "</strong>")
+		if (reviewSummary["badge_list"].length > 0) {
+			var badge = reviewSummary["badge_list"].slice(1, 2)[0];
+			templateData.badges = [{
+				categoryId: badge["badge_data"]["category_id"],
+				text: badge["text"],
+				subtext: badge["subtext"],
 			}];
 		}
 
