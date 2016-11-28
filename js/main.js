@@ -84,6 +84,7 @@
 		// prepare the data to be passed to the template
 		var templateData = {
 			name: hotelData.name,
+			tyId: hotelData.tyId,
 			reviewsCount: reviewSummary["reviews_count"],
 			trustScore: reviewSummary["summary"].score,
 			popularity: reviewSummary["summary"].popularity,
@@ -120,6 +121,7 @@
 		// prepare the data to be passed to the template
 		var templateData = {
 			name: hotelData.name,
+			tyId: hotelData.tyId,
 			reviewsCount: reviewSummary["reviews_count"],
 			trustScore: reviewSummary["summary"].score,
 			highlights: [],
