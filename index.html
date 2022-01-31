@@ -23,7 +23,7 @@
 	      <span>Top {{popularity}}%</span>
 	    </div>
 	  </div>
-	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html" target="_blank">
+	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
 	  <img src="{{image}}" class="img-responsive" alt="{{name}}"/>
 	</a>
 	</div>
@@ -34,7 +34,9 @@
 	    </p>
 	    <a href="" class="btn btn-success">View deals</a>
 	  </div>
-	  <h3><a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html" target="_blank">{{name}}</a></h3>
+	  <h3>
+	    <a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
+	  </h3>
 	  <div class="rating">
 	    <div class="stars">						
 	      <span class="active">&#x2605;</span>
@@ -70,7 +72,7 @@
     <script id="tmpl-hotel" type="x-tmpl-mustache">
       <div class="hotel">
 	<div class="thumbnail">
-	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html" target="_blank">
+	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
 	  <img src="{{image}}" class="img-responsive" alt="{{name}}"/>
 	</a>
 	</div>
@@ -81,7 +83,9 @@
 	    </p>
 	    <a href="" class="btn btn-primary">View deals</a>
 	  </div>
-	  <h3><a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html" target="_blank">{{name}}</a></h3>
+	  <h3>
+	    <a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
+	  </h3>
 	  <div class="rating">
 	    <div class="stars">	
 	      <span class="active">&#x2605;</span>

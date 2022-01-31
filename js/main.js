@@ -35,6 +35,11 @@
 	];
 
 	/*
+	This is a demo API key, do not reuse it! Contact TrustYou to receive your own.
+	*/
+	let apikey = "22222222-2222-2222-2222-222222222222"
+
+	/*
 	Prepare the request to the TrustYou API. We will make use of the Bulk
 	API to launch several requests at once. Note how the language and
 	version need to be passed with each individual request, but the
@@ -55,11 +60,7 @@
 		url: "https://api.trustyou.com/bulk",
 		data: {
 			request_list: requestList,
-			/*
-			This is a demo API key, do not reuse it! Contact
-			TrustYou to receive your own.
-			*/
-			key: "a06294d3-4d58-45c8-97a1-5c905922e03a"
+			key: apikey
 		},
 		// Usage of JSONP is not required for server-side calls
 		dataType: "jsonp"
@@ -89,7 +90,8 @@
 			trustScore: reviewSummary["summary"].score,
 			popularity: reviewSummary["summary"].popularity,
 			hotelTypes: [],
-			image: hotelData.image
+			image: hotelData.image,
+			apikey: apikey
 		};
 
 		/*
@@ -125,7 +127,8 @@
 			reviewsCount: reviewSummary["reviews_count"],
 			trustScore: reviewSummary["summary"].score,
 			highlights: [],
-			image: hotelData.image
+			image: hotelData.image,
+			apikey: apikey
 		};
 
 		/*
