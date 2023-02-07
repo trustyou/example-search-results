@@ -6,7 +6,7 @@
     
     <!-- These CSS files are for styling purposes only; they are not required to visualize the TrustYou API -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500,700"/>
-    <link rel="stylesheet" href="https://cdn.trustyou.com/common/trustyou-iconic/css/trustyou-iconic.css"/>
+    <link rel="stylesheet" href="https://cdn.trustyou.com/apps/trustyou-iconic/public/css/trustyou-iconic.min.latest.css"/>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/trustscore.css"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -23,7 +23,7 @@
 	      <span>Top {{popularity}}%</span>
 	    </div>
 	  </div>
-	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
+	<a href="https://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
 	  <img src="{{image}}" class="img-responsive" alt="{{name}}"/>
 	</a>
 	</div>
@@ -35,7 +35,7 @@
 	    <a href="" class="btn btn-success">View deals</a>
 	  </div>
 	  <h3>
-	    <a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
+	    <a href="https://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
 	  </h3>
 	  <div class="rating">
 	    <div class="stars">						
@@ -46,14 +46,11 @@
 	      <span class="active">&#x2605;</span>
 	    </div>
 	    <div class="trustscore size-xs pos">
-	      <div class="value">{{trustScore}}</div>
-	      <div class="badges">
-		<i class="ty-icon ty-icon-badge-full neg"></i>
-		<i class="ty-icon ty-icon-badge-full neu"></i>
-		<i class="ty-icon ty-icon-badge-full pos"></i>
-	      </div>
-	      <div class="score">Excellent</div>
-	      <div class="counter">{{reviewsCount}} Reviews</div>
+	      <iframe src="https://api.trustyou.com/hotels/{{tyId}}/trust_score.html?key={{apikey}}&size=xs&scale=100"
+            scrolling="no"
+            height="24"
+            width="215"
+          style="border:none"></iframe>
 	    </div>
 	  </div>
 	  <p class="hotel-type">
@@ -72,7 +69,7 @@
     <script id="tmpl-hotel" type="x-tmpl-mustache">
       <div class="hotel">
 	<div class="thumbnail">
-	<a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
+	<a href="https://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">
 	  <img src="{{image}}" class="img-responsive" alt="{{name}}"/>
 	</a>
 	</div>
@@ -84,7 +81,7 @@
 	    <a href="" class="btn btn-primary">View deals</a>
 	  </div>
 	  <h3>
-	    <a href="http://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
+	    <a href="https://api.trustyou.com/hotels/{{tyId}}/meta_review.html?key={{apikey}}" target="_blank">{{name}}</a>
 	  </h3>
 	  <div class="rating">
 	    <div class="stars">	
@@ -95,15 +92,11 @@
 	      <span>&#x2605;</span>
 	    </div>
 	    <div class="trustscore size-xs pos">
-	      <div class="value">{{trustScore}}</div>
-	      <div class="badges">
-		<i class="ty-icon ty-icon-badge-full neg"></i>
-		<i class="ty-icon ty-icon-badge-full neu"></i>
-		<i class="ty-icon ty-icon-badge-full pos"></i>
-	      </div>
-	      <div class="score">Excellent</div>
-	      <div class="counter">{{reviewsCount}} Reviews</div>
-	    </div>
+	      <iframe src="https://api.trustyou.com/hotels/{{tyId}}/trust_score.html?key={{apikey}}&size=xs&scale=100"
+            scrolling="no"
+            height="24"
+            width="215"
+          style="border:none"></iframe>
 	  </div>
 	  <p class="highlights">
 	    {{#highlights}}
@@ -133,8 +126,8 @@
 	<div id="hotels"></div>
       </section>
 
-      <a href="http://trustyou.com" class="verified-reviews">
-	<img src="https://api.trustyou.com/static/img/powered-by-trustyou-small.png" alt="Verified Reviews TrustYou" />
+      <a href="https://trustyou.com" class="verified-reviews">
+	<img src="https://api.trustyou.com/static/img/powered-by-trustyou-small.png" alt="Powered by TrustYou" />
       </a>
     </div>
 
